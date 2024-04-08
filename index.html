@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+
+<body>
+        <header>
+            <div class="container">
+                <img class="logo" src="img/logo.png" alt="err">
+                <div class="wrapper">
+                    <div class="offer">
+                        <h1 class="title">С помощью нас <br>
+                            вы сможете создать то, о чем</h1>
+                            <span class="title__span">желаете!</span>
+                            <p class="offer__text">Наши возможности
+                            + опыт позволят Вам достичь огромного
+                            успеха. Мы верим в вас! И знаем это на
+                            все 100%. Вас не остановить!</p>
+                            <a href="#" class="btn">Узнать больше...
+                            </a>
+                    </div>
+                    <img class="header__img" src="img/header-img.png" alt="err">
+                </div>
+             </div>
+        </header>
+
+
+
+        <section class="main">
+            <div class="container">
+                <h2 class="main__title">Что вам необходимо?</h2>
+                <div class="main__blocks">
+
+                    <div class="block">
+                        <img class="block__img" src="img/f3.png" alt="err">
+                        <h3>Первый блок</h3>
+                        <p class="block__text">Lorem, ipsum dolor sit amet consectetur <br> adipiscing elit</p>
+                    </div>
+
+                    <div class="block">
+                        <img class="block__img" src="img/f4.png" alt="err">
+                        <h3>Второй блок</h3>
+                        <p class="block__text">Lorem, ipsum dolor sit amet consectetur <br> adipiscing elit</p>
+                    </div>
+
+                    <div class="block">
+                        <img class="block__img" src="img/f5.png" alt="err">
+                        <h3>Третий блок</h3>
+                        <p class="block__text">Lorem, ipsum dolor sit amet consectetur <br> adipiscing elit</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="form__valid">
+            <div class="container">
+                <form id="form" action="#">
+                    <h2 class="form__title">Форма заказа наших услуг</h2>
+                    <div class="order__form">
+                        <div class="fio">
+
+                            <div class="form__name">Фамилия:</div>
+                            <div class="form"><input class="form-control" id="last__name" type="text" onblur="checkLast();" required /></div>
+                            <div class="invalid"><span id="last__Check"></span></div>
+
+                            <div class="form__name">Имя:</div>
+                            <div class="form"><input class="form-control" id="first__name" type="text" onblur="checkFirst();" required /></div>
+                            <div class="invalid"><span id="first__Check"></span></div>
+
+                            <div class="form__name">Отчество:</div>
+                            <div class="form"><input class="form-control" id="middle__name" type="text" onblur="checkMiddle();" required /></div>
+                            <div class="invalid"><span id="middle__Check"></span></div>
+                        
+                        </div>
+
+                        <div class="bottom__order">
+                            <div class="order__left">
+                                <div class="upper">
+                                    <div class="form__name">Телефон:</div>
+                                    <div class="row"><input class="form-control" id="phone__order" type="text" onblur="checkPhone();" placeholder="8-***-***-**-**" required /></div>
+                                    <div class="invalid"><span id="phone__Check"></span></div>
+                                </div>
+
+                                <div class="downer">
+                                    <div class="form__name">Желаемые дата и время оказания услуг:</div>
+                                    <input class="form-control" id="order__date" type="date"  onblur="checkDate();" required />
+                                    <div class="form"></div>
+                                </div>
+                            </div>
+
+                            <div class="order__right">
+                                <div class="form__name">Выберите вид услуги:</div>
+                                <select class="form-control" name="service" id="service" required>
+                                    <option value="" selected disabled>Не выбрано</option>
+                                    <option>Онлайн курсы по веб-дизайну</option>
+                                    <option>Обучение HTML/CSS</option>
+                                    <option>UX/UI дизайн</option>
+                                    <option>Веб-технологии для начинающих</option>
+                                    <option>Дизайн сайтов</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>  
+                    <button class="order__button" type="submit" id="order__button" onclick="handleClick()">Отправить заказ!</button>       
+                </form>
+
+
+            </div>
+        </section>
+
+
+
+        <section class="slave">
+            <div class="container">
+                <form class="main_form" action="#" method="get" enctype="multipart/form-data">
+                <h2 class="form__title">Форма заказа обратного звонка</h2>
+                <div class="form__group">
+
+                        <div class="form">
+                            <input class="form__input" type="text" name="name" placeholder="Имя" required>
+                        </div>
+                        
+                        <div class="form">
+                            <input class="form__input" type="email" name="email" placeholder="Введите свой E-mail" required>
+                        </div>
+
+                        <div class="form">
+                            <input class="form__input" type="tel" name="phone" placeholder="8-***-***-**-**" required pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                        </div>
+
+                        <div class="form">
+                            <input class="form__input" type="text" name="topic" placeholder="Какая тема вас интересует?" required>
+                        </div>
+                        
+                        
+                        <button class="form__button" type="submit">Отправить вопрос!</button>
+                        
+                </div>
+                </form> 
+            </div>
+        </section>
+
+
+        <section class="ending">
+            <div class="container">  
+                <div class="ending__title">
+                    © Все на этом сайте защищено
+                </div>
+            </div>  
+        </section>
+        <script src="JavaScript.js"></script>
+</body>
+</html>
